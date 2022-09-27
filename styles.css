@@ -1,12 +1,12 @@
 *{
     margin: 0%;
     font-family: 'Kanit', sans-serif;
-   
+    
 }
 
 body{
-    background-image: url(Assets/textura.png);
     background-size: 100%;
+    background-image: url(Assets/textura.png);
     overflow-x: hidden;
 }
 
@@ -58,6 +58,14 @@ nav{
     align-items: center;
 }
 
+.second-page{
+    background-color: #fff;
+}
+.general-container2{
+    width: 100vw;
+    height: 100vh;
+}
+
 .can{
     position: relative;
     margin-left: 16.5rem;
@@ -81,23 +89,23 @@ nav{
     transform: translateX(-200%);
 }
 
-.first-word{
-    animation: move 0.5s;
-    animation-fill-mode: forwards;
-}
-
 .can:hover{
     scale: 1.05;
 }
 
+.first-word{
+    animation: move 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
 .second-word{
-    animation: move 0.5s;
+    animation: move 0.5s ease-in-out;
     animation-delay: 500ms;
     animation-fill-mode: forwards;
 }
 
 .third-word{
-    animation: move 0.5s;
+    animation: move 0.5s ease-in-out;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
     z-index: 100;
@@ -119,17 +127,30 @@ nav{
         transform: translate(3180%, 1500%) scale(1.2);
         opacity: 1;
     }
-    45%{ 
+    9%{ 
         z-index: 100;
     }
-    50%{
+    10%{
         transform: translate(3650%, 1200%) scale(1);
         z-index: 101;
         opacity: 1;
     }
-    100%{
+    20%{
         transform: translate(3180%, 1500%) scale(1.2);
         z-index: 101;
+        opacity: 1;
+    }
+    21%{
+        z-index: 100;
+    }
+    30%{
+        transform: translate(3500%, 1200%);
+    }
+    90%{
+        transform: translate(3500%, 1200%);
+    } 
+    100%{
+        transform: translate(3180%, 1500%) scale(1.2);
         opacity: 1;
     }
 }
@@ -162,7 +183,7 @@ nav{
 .freeze{
     position: absolute;
     opacity: 0;
-    animation: move-init 2s ease-in-out 2000ms,freeze-move 5s ease-in-out 4000ms infinite normal forwards;
+    animation: move-init 2s ease-in-out 2000ms,freeze-move 15s ease-in-out 4000ms infinite normal forwards;
     width: 30px;
     height: 30px;
     transform: translate(3400%, 1400%);
